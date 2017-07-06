@@ -12544,14 +12544,15 @@ button.close {
 body {
   background-color: #f7f8f9;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* line 7, ../sass/_custom.scss */
+/* line 8, ../sass/_custom.scss */
 h1, h2, h3, h4 {
   color: #241d35 !important;
 }
 
-/* line 10, ../sass/_custom.scss */
+/* line 11, ../sass/_custom.scss */
 .home-button, .block-text-home .small-box a, .block-google-map .block-google-body a, .block-choose a, .block-doors a, .block-repairs a, .block-carousel .custom-prev, .block-carousel .custom-next, .block-carousel a {
   border: 2px solid #afd5d5;
   padding: 5px;
@@ -12560,13 +12561,13 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 
-/* line 18, ../sass/_custom.scss */
+/* line 19, ../sass/_custom.scss */
 .container {
   width: 75%;
   margin: auto;
 }
 
-/* line 22, ../sass/_custom.scss */
+/* line 23, ../sass/_custom.scss */
 .button-call {
   padding: 10px;
   margin: 10px 0px;
@@ -12575,75 +12576,181 @@ h1, h2, h3, h4 {
   border: none;
 }
 
-/* line 30, ../sass/_custom.scss */
+/* line 31, ../sass/_custom.scss */
 .map {
   width: 250px;
   height: 450px;
 }
 
+/* line 35, ../sass/_custom.scss */
+::-webkit-input-placeholder {
+  color: #241d35;
+  background: #d2eaea;
+}
+
+/* line 40, ../sass/_custom.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #241d35;
+  background: #d2eaea;
+}
+
+/* line 46, ../sass/_custom.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #241d35;
+  background: #d2eaea;
+}
+
+/* line 52, ../sass/_custom.scss */
+:-ms-input-placeholder {
+  color: #241d35;
+  background: #d2eaea;
+}
+
 /* header styling */
+/* line 58, ../sass/_custom.scss */
+.header {
+  background: #fff;
+}
+
+/* line 61, ../sass/_custom.scss */
+.navbar-default {
+  position: relative;
+  padding: 10px;
+  margin-right: 100px;
+}
+
+/* line 66, ../sass/_custom.scss */
+.book-survey {
+  padding: 30px;
+}
+
+/* line 69, ../sass/_custom.scss */
+.survey-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80px;
+  background: #afd5d5;
+  padding: 20px;
+  color: #241d35;
+  cursor: pointer;
+}
+
+/* line 79, ../sass/_custom.scss */
+.form-survey {
+  position: absolute;
+  top: 0;
+  width: 0;
+  z-index: 9999;
+  background: #afd5d5;
+  color: #241d35;
+  right: -50px;
+  padding: 20px;
+}
+/* line 90, ../sass/_custom.scss */
+.form-survey p {
+  margin: 0 37px;
+}
+
+/* line 95, ../sass/_custom.scss */
+#gform_6 ul li {
+  list-style: none;
+}
+/* line 98, ../sass/_custom.scss */
+#gform_6 label {
+  margin: 20px auto 5px;
+}
+/* line 101, ../sass/_custom.scss */
+#gform_6 input {
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  font-weight: normal;
+  width: 80%;
+  padding: 5px;
+  background: #d2eaea;
+}
+/* line 110, ../sass/_custom.scss */
+#gform_6 input[type=submit] {
+  width: 20% !important;
+  margin-left: 40px;
+}
+/* line 114, ../sass/_custom.scss */
+#gform_6 input[type=checkbox] {
+  width: 15px !important;
+  margin-left: -40px !important;
+}
+
+/* line 123, ../sass/_custom.scss */
+#gform_6
+#close {
+  cursor: pointer;
+}
+
 /* Blocks Styling */
 /* Text block */
-/* line 41, ../sass/_custom.scss */
+/* line 131, ../sass/_custom.scss */
 .block-text-home {
-  height: 50vh;
+  height: 600px;
   background-position: center center;
   position: relative;
   margin-top: -20px;
 }
-/* line 47, ../sass/_custom.scss */
+/* line 137, ../sass/_custom.scss */
 .block-text-home .small-box {
   background: #fff;
   margin-top: 320px;
   height: 230px;
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 150px;
   left: 0;
   z-index: 999;
   padding: 20px;
 }
 
 /* Google-map block */
-/* line 67, ../sass/_custom.scss */
+/* line 157, ../sass/_custom.scss */
 .block-google-map {
   margin-top: 150px;
 }
-/* line 70, ../sass/_custom.scss */
+/* line 160, ../sass/_custom.scss */
 .block-google-map .block-google-body {
   margin-top: 60px;
 }
-/* line 73, ../sass/_custom.scss */
+/* line 163, ../sass/_custom.scss */
 .block-google-map .block-google-body h5 {
   margin: 0px 50px;
   color: #afd5d5;
   text-transform: uppercase;
 }
-/* line 78, ../sass/_custom.scss */
+/* line 168, ../sass/_custom.scss */
 .block-google-map .block-google-body img {
   float: right;
 }
-/* line 83, ../sass/_custom.scss */
+/* line 173, ../sass/_custom.scss */
 .block-google-map .block-google-body p {
   margin: 20px 50px;
 }
-/* line 86, ../sass/_custom.scss */
+/* line 176, ../sass/_custom.scss */
 .block-google-map .block-google-body a {
   margin: 20px 50px;
 }
 
-/* line 94, ../sass/_custom.scss */
+/* line 184, ../sass/_custom.scss */
 .block-filter-body h5 {
   margin: 100px 40% 30px;
   color: #afd5d5;
   text-transform: uppercase;
 }
 
-/* line 101, ../sass/_custom.scss */
+/* line 191, ../sass/_custom.scss */
 .block-google-filter {
   margin-bottom: 15px;
 }
-/* line 104, ../sass/_custom.scss */
+/* line 194, ../sass/_custom.scss */
 .block-google-filter img {
   width: 50%;
   height: 50%;
@@ -12652,15 +12759,15 @@ h1, h2, h3, h4 {
 }
 
 /* Choose block */
-/* line 114, ../sass/_custom.scss */
+/* line 204, ../sass/_custom.scss */
 .block-choose {
   padding: 50px 100px;
 }
-/* line 117, ../sass/_custom.scss */
+/* line 207, ../sass/_custom.scss */
 .block-choose a {
   margin-top: 20px;
 }
-/* line 121, ../sass/_custom.scss */
+/* line 211, ../sass/_custom.scss */
 .block-choose .block-choose-row {
   background: #fff;
   padding: 20px;
@@ -12668,82 +12775,82 @@ h1, h2, h3, h4 {
 }
 
 /* Doors block */
-/* line 132, ../sass/_custom.scss */
+/* line 222, ../sass/_custom.scss */
 .block-doors .block-doors-content {
   margin: 20px auto;
 }
-/* line 135, ../sass/_custom.scss */
+/* line 225, ../sass/_custom.scss */
 .block-doors .block-doors-content img {
   margin: 0px auto;
 }
 
 /* Block repairs */
-/* line 141, ../sass/_custom.scss */
+/* line 231, ../sass/_custom.scss */
 .block-repairs {
   height: 100vh;
 }
-/* line 144, ../sass/_custom.scss */
+/* line 234, ../sass/_custom.scss */
 .block-repairs .block-repairs-content {
   margin: 0px 50px;
 }
-/* line 147, ../sass/_custom.scss */
+/* line 237, ../sass/_custom.scss */
 .block-repairs .block-repairs-content .block-repairs-img, .block-repairs .block-repairs-content block-repairs-info {
   margin-top: 30px;
 }
-/* line 150, ../sass/_custom.scss */
+/* line 240, ../sass/_custom.scss */
 .block-repairs .block-repairs-content .block-repairs-info p {
   border-bottom: 1px solid #afd5d5;
   width: 80%;
 }
-/* line 157, ../sass/_custom.scss */
+/* line 247, ../sass/_custom.scss */
 .block-repairs img {
   margin-bottom: 30px;
 }
-/* line 161, ../sass/_custom.scss */
+/* line 251, ../sass/_custom.scss */
 .block-repairs ul {
   list-style: none;
 }
 
 /* Gallery block */
-/* line 171, ../sass/_custom.scss */
+/* line 261, ../sass/_custom.scss */
 .block-gallery-images img {
   padding: 20px;
 }
 
 /* block-carousel */
-/* line 177, ../sass/_custom.scss */
+/* line 267, ../sass/_custom.scss */
 .block-carousel .custom-prev {
   top: 50%;
   position: absolute;
   left: -100px;
   cursor: pointer;
 }
-/* line 184, ../sass/_custom.scss */
+/* line 274, ../sass/_custom.scss */
 .block-carousel .custom-next {
   top: 50%;
   position: absolute;
   right: -100px;
   cursor: pointer;
 }
-/* line 191, ../sass/_custom.scss */
+/* line 281, ../sass/_custom.scss */
 .block-carousel .block-carousel-images {
   position: relative;
   background: #fff;
 }
-/* line 195, ../sass/_custom.scss */
+/* line 285, ../sass/_custom.scss */
 .block-carousel .block-carousel-content {
   height: 200px;
   background: #fff;
   padding: 50px;
 }
-/* line 203, ../sass/_custom.scss */
+/* line 293, ../sass/_custom.scss */
 .block-carousel .social {
   border: none;
   padding: 0;
 }
 
 /* Footer */
-/* line 212, ../sass/_custom.scss */
+/* line 302, ../sass/_custom.scss */
 .footer {
   margin-top: 50px;
   background: #241d35;
@@ -12751,11 +12858,11 @@ h1, h2, h3, h4 {
   padding: 15px;
   color: #fff;
 }
-/* line 219, ../sass/_custom.scss */
+/* line 309, ../sass/_custom.scss */
 .footer a {
   color: #fff;
 }
-/* line 223, ../sass/_custom.scss */
+/* line 313, ../sass/_custom.scss */
 .footer i {
   color: #241d35;
   background: #fff;
@@ -12767,7 +12874,7 @@ h1, h2, h3, h4 {
 /**
  *	Mobile Menu - Toggle
  */
-/* line 238, ../sass/_custom.scss */
+/* line 328, ../sass/_custom.scss */
 .menu-button {
   width: 30px;
   height: 20px;
@@ -12783,12 +12890,12 @@ h1, h2, h3, h4 {
   -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 }
 @media screen and (min-width: 768px) {
-  /* line 238, ../sass/_custom.scss */
+  /* line 328, ../sass/_custom.scss */
   .menu-button {
     display: none;
   }
 }
-/* line 255, ../sass/_custom.scss */
+/* line 345, ../sass/_custom.scss */
 .menu-button .bar1, .menu-button .bar2, .menu-button .bar3 {
   width: 35px;
   height: 5px;
@@ -12797,24 +12904,24 @@ h1, h2, h3, h4 {
   transition: 0.4s;
 }
 
-/* line 267, ../sass/_custom.scss */
+/* line 357, ../sass/_custom.scss */
 .button-open .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-/* line 272, ../sass/_custom.scss */
+/* line 362, ../sass/_custom.scss */
 .button-open .bar2 {
   opacity: 0;
 }
 
-/* line 274, ../sass/_custom.scss */
+/* line 364, ../sass/_custom.scss */
 .button-open .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-/* line 278, ../sass/_custom.scss */
+/* line 368, ../sass/_custom.scss */
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -12831,7 +12938,7 @@ h1, h2, h3, h4 {
   -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
   -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 }
-/* line 293, ../sass/_custom.scss */
+/* line 383, ../sass/_custom.scss */
 .mobile-nav > ul {
   display: none;
   left: 30px;
@@ -12842,12 +12949,12 @@ h1, h2, h3, h4 {
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 303, ../sass/_custom.scss */
+/* line 393, ../sass/_custom.scss */
 .mobile-nav > ul li {
   list-style: none;
   margin-bottom: 3rem;
 }
-/* line 307, ../sass/_custom.scss */
+/* line 397, ../sass/_custom.scss */
 .mobile-nav > ul li a {
   color: white;
   font-family: 'Josefin Sans', sans-serif;
@@ -12856,12 +12963,96 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-/* line 320, ../sass/_custom.scss */
+/* line 410, ../sass/_custom.scss */
 .mobile-nav.menu-active {
   visibility: visible;
 }
 
-/* line 324, ../sass/_custom.scss */
+/* line 414, ../sass/_custom.scss */
 .mobile-nav.menu-active > ul {
   display: block;
+}
+
+/* line 419, ../sass/_custom.scss */
+#ui-datepicker-div {
+  background: #FFF;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: none;
+  padding: 20px;
+  width: 300px;
+}
+/* line 424, ../sass/_custom.scss */
+#ui-datepicker-div .ui-icon {
+  color: transparent;
+  cursor: pointer;
+  font-size: 0px;
+}
+/* line 425, ../sass/_custom.scss */
+#ui-datepicker-div .ui-icon:before {
+  color: #afd5d5;
+  font-family: "FontAwesome";
+  font-size: 18px;
+}
+/* line 427, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-prev {
+  float: left;
+  width: 10%;
+}
+/* line 428, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-prev .ui-icon:before {
+  content: '\f060';
+}
+/* line 429, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-prev.ui-state-disabled {
+  display: none;
+}
+/* line 431, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-next {
+  float: right;
+  width: 10%;
+}
+/* line 432, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-next .ui-icon:before {
+  content: '\f061';
+  float: right;
+}
+/* line 433, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-next.ui-state-disabled {
+  display: none;
+}
+/* line 437, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-title select {
+  float: left;
+  width: 70%;
+}
+/* line 439, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-title .ui-datepicker-month {
+  margin: 0px 5% 6px;
+}
+/* line 440, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-title .ui-datepicker-year {
+  margin: 0px 15% 6px;
+}
+/* line 443, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-today {
+  background-color: #afd5d5;
+  border-radius: 4px;
+}
+/* line 444, ../sass/_custom.scss */
+#ui-datepicker-div .ui-datepicker-today a {
+  color: #FFF;
+}
+/* line 447, ../sass/_custom.scss */
+#ui-datepicker-div table {
+  width: 100%;
+}
+/* line 448, ../sass/_custom.scss */
+#ui-datepicker-div table td, #ui-datepicker-div table th {
+  text-align: center;
+}
+/* line 450, ../sass/_custom.scss */
+#ui-datepicker-div table td a {
+  display: block;
+  padding: 5px;
 }

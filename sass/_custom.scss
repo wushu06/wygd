@@ -2,10 +2,11 @@
 body {
 	background-color: #f7f8f9;
 	width: 100%;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1,h2,h3,h4 {
-	color: #241d35 !important;
+	color: $sec-color !important;
 }
 .home-button{
 	border: 2px solid $main-color;
@@ -29,17 +30,106 @@ h1,h2,h3,h4 {
  }
 .map {
     width: 250px;
-   height: 450px;
+    height: 450px;
  }
+ ::-webkit-input-placeholder {
+  color: $sec-color;
+  background: $main-light;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $sec-color;
+  background: $main-light;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+   color: $sec-color;
+  background: $main-light;
+}
+
+:-ms-input-placeholder {
+   color: $sec-color;
+  background: $main-light;
+}
 
  /* header styling */ 
+ .header {
+ 	background: #fff;
+ }
+ .navbar-default {
+ 	position: relative;
+ 	padding: 10px;
+ 	margin-right: 100px;
+ }
+.book-survey {
+	padding: 30px;
+}
+.survey-btn{
+	position: absolute;
+    top: 0;
+    right: 0;
+    height: 80px;
+    background: $main-color;
+    padding: 20px;
+    color: $sec-color;
+    cursor: pointer;
+}
+.form-survey {
+	position: absolute;
+    top: 0;
+   
+    width: 0;
+    z-index: 9999;
+    background: $main-color;
+    color: $sec-color;
+    right:  -50px;
+    padding: 20px;
 
+    p {
+    	margin: 0 37px;
+    }
+}
+#gform_6 {
+ 	ul li {
+  		list-style:none
+  	}
+  	label {
+  		margin: 20px auto 5px;
+  	}
+  	input {
+		  border: none;
+		  padding: 0;
+		  font-size: 12px;
+		  font-weight: normal;
+		  width: 80%;
+		  padding: 5px;
+		  background: $main-light;
+		  	
+			&[type=submit] {
+				  width: 20% !important;
+				  margin-left: 40px;
+			 }
+			&[type=checkbox] {
+			      width: 15px !important;
+		          margin-left: -40px !important;
+			  
+		    }
+ 
 
+    }
+}
+#gform_6 
+
+#close {
+	cursor: pointer;
+}
 
 /* Blocks Styling */
 /* Text block */
 .block-text-home{
-		height: 50vh;
+		height: 600px;
 		background-position:center center;
 		position: relative;
 		margin-top: -20px;
@@ -50,7 +140,7 @@ h1,h2,h3,h4 {
 		    height: 230px;
 		    position: absolute;
 		    width: 100%;
-		    top: 50%;
+		    top: 150px;
 		    left: 0;
 		    z-index: 999;
 		    padding: 20px;
@@ -324,4 +414,41 @@ h1,h2,h3,h4 {
 .mobile-nav.menu-active > ul {
   display: block;
 }
+
+
+#ui-datepicker-div          { background: #FFF; border: 1px solid #ddd; border-radius:4px; 
+
+ display:none; padding:20px; 
+ width:300px; 
+ 
+  .ui-icon                  { color: transparent; cursor: pointer; font-size: 0px; }
+  .ui-icon:before           { color: $main-color; font-family:"FontAwesome"; font-size: 18px; }
+ 
+  .ui-datepicker-prev       { float: left; width: 10%;
+    .ui-icon:before         { content:'\f060'; }
+    &.ui-state-disabled     { display:none; }
+  }
+  .ui-datepicker-next       { float: right; width: 10%;
+    .ui-icon:before         { content:'\f061'; float: right; }
+    &.ui-state-disabled     { display:none; }
+  }
+ 
+  .ui-datepicker-title      { 
+    select                  { float: left;  width: 70%; }
+ 
+    .ui-datepicker-month    { margin: 0px 5% 6px; }
+    .ui-datepicker-year     { margin: 0px 15% 6px; }
+  }
+ 
+  .ui-datepicker-today      { background-color: $main-color; border-radius: 4px;
+    a                       { color: #FFF; }
+  }
+ 
+  table                     { width: 100%; 
+    td, th                  { text-align: center; }
+    td                      {  
+      a                     { display: block; padding: 5px; }
+    }
+  } 
+  }
 

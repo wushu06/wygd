@@ -18,15 +18,14 @@
     <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.png" />
 
     <link href="https://fonts.googleapis.com/css?family=Ek+Mukta:300,400|Josefin+Sans:400,400i,600,700" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
     <?php wp_head(); ?>
 
 </head>
 <body <?php body_class(); ?>>
   
-   
 
-<header class="header">
+<header >
      <!-- Static navbar -->
         <nav class="navbar navbar-default">
         <div class="menu-button">
@@ -77,3 +76,46 @@
         </div><!--/.container-fluid -->
       </nav>
  </header>
+
+<div >
+  <div calss='btn-container hidden'>
+  <a class="survey-btn " id="btn-survey">book a free <br> site survey</a>
+</div>
+ </div>
+
+
+ <div class='form-survey ' id='survey-form'>
+  <span id="close"> &#10006;</span>
+<p>Book your <strong>free</strong> site <br> survey now!</p>
+<?php // gravity_form( 6, false, false, true, '', false ); ?>
+
+<?php gravity_form(6, false, false, false, '', false, false);?>
+
+
+ </div>
+
+ 
+<script type="text/javascript">
+
+if(document.getElementById("input_6_9").value == 1) {
+document.getElementById("gform_next_button_6_8").disabled = true;
+} else {
+  document.getElementById("gform_next_button_6_8").disabled = false;
+}
+
+
+var btn = document.getElementById('btn-survey');
+var form = document.getElementById('survey-form');
+var close = document.getElementById('close');
+btn.addEventListener("click", showForm);
+close.addEventListener("click", closeForm);
+
+function showForm() {
+    form.style.width = "450px";
+}
+function closeForm() {
+    form.style.width = "0";
+
+}
+</script>
+
