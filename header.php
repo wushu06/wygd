@@ -18,7 +18,9 @@
     <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.png" />
 
     <link href="https://fonts.googleapis.com/css?family=Ek+Mukta:300,400|Josefin+Sans:400,400i,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+     
     <?php wp_head(); ?>
 
 </head>
@@ -70,7 +72,8 @@
                       wp_nav_menu($arg);
 
                 ?>
-                       
+                                     
+
            
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -80,42 +83,49 @@
 <div >
   <div calss='btn-container hidden'>
   <a class="survey-btn " id="btn-survey">book a free <br> site survey</a>
+
 </div>
  </div>
 
 
- <div class='form-survey ' id='survey-form'>
+<div class='form-survey ' id='survey-form'>
   <span id="close"> &#10006;</span>
-<p>Book your <strong>free</strong> site <br> survey now!</p>
-<?php // gravity_form( 6, false, false, true, '', false ); ?>
+<h4>Book your <strong>free</strong> site <br> survey now!</h4>
+<p>Whether you need a service, repair or completely new garage door, the first thing we will do is perform a FREE site survey generate your quote.</p>
 
 <?php gravity_form(6, false, false, false, '', false, false);?>
+<i class="fa fa-arrow-right arrow-date" aria-hidden="true"></i>
+<p><input id="pickTime" type="text" class="time" placeholder="CHOOSE A TIME"/></p>
+<i class="fa fa-arrow-right arrow-time" aria-hidden="true"></i>
+
+
+<button id='available'>Check avialibility</button>
+<input type='submit' value='NEXT' calss='next-form' id='next-form'>
+
+<p class='form-parag'><span class='select-date'>Please select a date and time</span></p>
+
+<span class='select-time'>Please select a time</span>
+
+
+ </div>
+<div class='form-survey-two ' id='survey-form-two'>
+<span id="closeTwo"> &#10006;</span>
+<p>Book your <strong>free</strong> site <br> survey now!</p> <br>
+<?php // gravity_form( 6, false, false, true, '', false ); ?>
+
+<?php gravity_form(8, false, false, false, '', false, false);?>
 
 
  </div>
 
- 
-<script type="text/javascript">
-
-if(document.getElementById("input_6_9").value == 1) {
-document.getElementById("gform_next_button_6_8").disabled = true;
-} else {
-  document.getElementById("gform_next_button_6_8").disabled = false;
-}
+ <!-- .squaredOne -->
+    <div class="squaredOne">
+      <input type="checkbox" value="None" id="squaredOne" name="check" checked />
+      <label for="squaredOne"></label>
+    </div>
 
 
-var btn = document.getElementById('btn-survey');
-var form = document.getElementById('survey-form');
-var close = document.getElementById('close');
-btn.addEventListener("click", showForm);
-close.addEventListener("click", closeForm);
+           
 
-function showForm() {
-    form.style.width = "450px";
-}
-function closeForm() {
-    form.style.width = "0";
-
-}
-</script>
+         
 

@@ -53,6 +53,29 @@ h1,h2,h3,h4 {
    color: $sec-color;
   background: $main-light;
 }
+.select-field {
+ &::-webkit-input-placeholder {
+  color: red;
+  background: $main-light;
+}
+
+&:-moz-placeholder {
+  /* Firefox 18- */
+  color: redr;
+  background: $main-light;
+}
+
+&::-moz-placeholder {
+  /* Firefox 19+ */
+   color: red;
+  background: $main-light;
+}
+
+&:-ms-input-placeholder {
+   color: red;
+  background: $main-light;
+}
+}
 
  /* header styling */ 
  .header {
@@ -70,46 +93,77 @@ h1,h2,h3,h4 {
 	position: absolute;
     top: 0;
     right: 0;
-    height: 80px;
+    height: 72px;
     background: $main-color;
     padding: 20px;
     color: $sec-color;
     cursor: pointer;
+    &:hover {
+    	text-decoration: none;
+    	color: $sec-color;
+    }
 }
-.form-survey {
+.form-survey, .form-survey-two {
 	position: absolute;
     top: 0;
-   
-    width: 0;
+   	display:none;
+    width: 450px;
     z-index: 9999;
     background: $main-color;
     color: $sec-color;
     right:  -50px;
     padding: 20px;
+    margin: 0 50px;
 
     p {
     	margin: 0 37px;
     }
+    h4 {
+    	margin: 20px 35px 15px;
+    }
+    .form-parag {
+    	margin: 12px 42px;
+    }
+    hr {
+	  position:absolute;
+	  content:'';
+	  width:50px;
+	  background-color: black;
+	  height:2px;
+	  border: none;
+	}
+	li {
+		/* margin: -20px auto; */
+	}
 }
-#gform_6 {
+#gform_6, #gform_8 {
  	ul li {
   		list-style:none
   	}
   	label {
   		margin: 20px auto 5px;
+  		font-size: 12px;
   	}
   	input {
 		  border: none;
 		  padding: 0;
 		  font-size: 12px;
 		  font-weight: normal;
-		  width: 80%;
+		  width: 90%;
 		  padding: 5px;
 		  background: $main-light;
+		  position:relative;
 		  	
 			&[type=submit] {
-				  width: 20% !important;
-				  margin-left: 40px;
+
+				width: 30% !important;
+				
+				border: 2px solid #222;
+				background: transparent;
+			    padding: 5px;
+			    color: #222;
+			    font-size: 12px;
+			    font-weight: 400;
 			 }
 			&[type=checkbox] {
 			      width: 15px !important;
@@ -120,10 +174,27 @@ h1,h2,h3,h4 {
 
     }
 }
-#gform_6 
+#gform_6 {
+	input {
+		margin: 10px 5px 0px -3px;
+	}
+}
 
-#close {
+#pickTime{
+	border: none;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    width: 99%;
+    padding: 5px;
+    background: #d2eaea;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#close, #closeTwo {
 	cursor: pointer;
+	    margin: 35px;
 }
 
 /* Blocks Styling */
@@ -406,7 +477,7 @@ h1,h2,h3,h4 {
 }
 
 
-
+/* Date Picker */
 .mobile-nav.menu-active {
   visibility: visible;
 }
@@ -451,4 +522,97 @@ h1,h2,h3,h4 {
     }
   } 
   }
+#next-form{
+	margin: 0px 40px;
+	width: 30% !important;
+	display: none;
+	border: 2px solid #222;
+	background: transparent;
+    padding: 5px;
+    color: #222;
+    font-size: 12px;
+    font-weight: 400;
+	
+}
+#available{
+	margin: 0px 40px;
+	width: 30% !important;
+	border: 2px solid #222;
+	background: transparent;
+    padding: 5px;
+    color: #222;
+    font-size: 12px;
+    font-weight: 400;
+
+}
+#gform_submit_button_6{
+	display: none;
+	border: 2px solid #222;
+	background: transparent;
+    padding: 5px;
+    color: #222;
+    font-size: 12px;
+    font-weight: 400;
+}
+.select-date, .select-time {
+	display: none;
+}
+.arrow-date, .arrow-time {
+	position: absolute;
+    left: 370px;
+}
+.arrow-date {
+	top: 150px;
+}
+.arrow-time {
+	top: 190px;
+}
+
+.gchoice_8_14_1, .gchoice_8_14_2, .gchoice_8_14_3 {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  
+ 
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+  label {
+    width: 20px;
+    max-width: 113px;
+    height: 20px;
+    position: absolute;
+    top: -12px;
+    left: 40px;
+    cursor: pointer;
+    background: linear-gradient(top, #222 0%, #45484d 100%);
+    &:after {
+  content: '';
+	  width: 27px;
+	  height: 27px;
+	  position: absolute;
+	  top: -8px;
+	  left: -37px;
+	  background: green;
+	  background: linear-gradient(top, red 0%, black 100%);
+	  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+	  opacity: 0;	
+	    }
+    &:hover::after {
+      opacity: 0.3;
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      opacity: 1;
+      background-color:green;
+    }   
+  } 
+}
+.gfield_checkbox {
+	margin-left: -35px;
+	li {
+		margin: 10px 0;
+	}
+}
 

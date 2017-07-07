@@ -132,6 +132,8 @@ class westYorkshire {
 
 	public function enqueue_styles() {
 		// Set up our base stylesheet.
+				wp_enqueue_style( 'timepicker-style', THEME_DIR . '/stylesheets/jquery.timepicker.css', array(), '1.0.1' );
+
 		wp_enqueue_style( 'wygd-style', THEME_DIR . '/stylesheets/app.css', array(), '1.0.1' );
 
 		// Add our slick carousel styles
@@ -150,6 +152,8 @@ class westYorkshire {
 		wp_enqueue_script( 'wygd-bootstrap', THEME_DIR . '/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js', array( 'jquery' ), '1.0.1', false );
 		wp_enqueue_script( 'wygd-slick', THEME_DIR . '/js/slick/slick.min.js', array( 'jquery' ), '1.0.1', false );
 		//wp_enqueue_script( 'wygd-viewport', THEME_DIR . '/js/jquery.viewportchecker.js', array( 'jquery' ), '1.0.1', false );
+		wp_enqueue_script( 'time-app', THEME_DIR . '/js/jquery.timepicker.js', array( 'jquery' ), '3.1.1', false );
+		
 		wp_enqueue_script( 'wygd-app', THEME_DIR . '/js/app.js', array( 'jquery' ), '1.0.1', false );
 	}
 
