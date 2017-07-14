@@ -132,13 +132,16 @@ class westYorkshire {
 
 	public function enqueue_styles() {
 		// Set up our base stylesheet.
-				wp_enqueue_style( 'timepicker-style', THEME_DIR . '/stylesheets/jquery.timepicker.css', array(), '1.0.1' );
+
+		wp_enqueue_style( 'timepicker-style', THEME_DIR . '/stylesheets/jquery.timepicker.css', array(), '1.0.1' );
 
 		wp_enqueue_style( 'wygd-style', THEME_DIR . '/stylesheets/app.css', array(), '1.0.1' );
 
-		// Add our slick carousel styles
+
+        // Add our slick carousel styles
 		wp_enqueue_style( 'wygd-slick', THEME_DIR . '/js/slick/slick.css', array(), '1.0.1' );
 		wp_enqueue_style( 'wygd-slick-theme', THEME_DIR . '/js/slick/slick-theme.css', array(), '1.0.1' );
+
 
 		// Include the fontawesome library.
 		wp_enqueue_style( 'wygd-fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), '1.0.1' );
@@ -153,8 +156,13 @@ class westYorkshire {
 		wp_enqueue_script( 'wygd-slick', THEME_DIR . '/js/slick/slick.min.js', array( 'jquery' ), '1.0.1', false );
 		//wp_enqueue_script( 'wygd-viewport', THEME_DIR . '/js/jquery.viewportchecker.js', array( 'jquery' ), '1.0.1', false );
 		wp_enqueue_script( 'time-app', THEME_DIR . '/js/jquery.timepicker.js', array( 'jquery' ), '3.1.1', false );
+		wp_enqueue_script( 'jquery-cookie', THEME_DIR . '/js/jquery.cookie.js', array( 'jquery' ), '3.1.1', false );
+
+		wp_enqueue_script( 'isotop', THEME_DIR . '/js/masonry.min.js', array( 'jquery' ), '1.0.1', false );
+		wp_enqueue_script( 'fittext-app', THEME_DIR . '/js/jquery.fittext.js', array( 'jquery' ), '1.0.1', false );
 		
 		wp_enqueue_script( 'wygd-app', THEME_DIR . '/js/app.js', array( 'jquery' ), '1.0.1', false );
+
 	}
 
 

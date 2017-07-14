@@ -1,4 +1,11 @@
     <footer class="footer text-center">
+
+         <?php // if ( !is_front_page() ) :  ?>
+            
+                <button class="button-call" href='#'>FOR SAME DAY REAPAIRS CALL <strong> 01924 849 579 </strong></button>
+            
+            <?php // endif; ?> 
+            
         <div class="social social--footer pull-left">
             <?php if( $facebook = theme('social_accounts', 'facebook') ) { ?>
                 <a href="<?php echo $facebook ?>" class="social__facebook" title="Facebook" target="blank"><i class='fa fa-facebook' ></i>
@@ -20,7 +27,7 @@
            
         
 
-        <div class="footer__links pull-right">
+        <div class="footer-links pull-right">
             <p>
             <a href="<?php echo site_url( 'terms' ); ?>" title="Terms &amp; Conditions">T&amp;Cs</a>
              &nbsp; | &nbsp; 
@@ -28,16 +35,12 @@
          </p>
       </div>
 
-      
 
+           
 
 
     </footer>
-    <?php if ( !is_front_page() ) :  ?>
-    <div class="text-center">
-        <button class="button-call" href='#'>FOR SAME DAY REAPAIRS CALL 01924 849 579</button>
-    </div> 
-    <?php endif; ?>   
+
            
 
    

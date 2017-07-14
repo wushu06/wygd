@@ -2,7 +2,7 @@
     <div class="container">
     	
 	    	<div class="row">
-	            <div class="col-md-12">
+	            <div class="col-md-12 block-height">
 	            	
 
 	            	<div class="block-google-body">
@@ -12,46 +12,44 @@
 	                </div>
 	            </div>    
 	        </div> 
-	</div>                       
-	                    
+	</div>
 
-	       
-	            
-	            	
+
 
 	            	
 
+	            	
 
-<div class="row">
+
+    <div class="row">
 	<div class='container block-filter-body'>
 	<h5><?php echo theme( 'small_filter_title' ); ?></h5>	
-	<h2 class="block-google-title text-center"><?php echo theme( 'filter_title' ); ?></h2>
-    <?php // if( $images = theme( 'filter' ) ) { ?>
-    <?php // foreach( $images as $i => $image ) { ?>
-    	
+	<h2 class="block-google-title text-center"><?php echo theme( 'filter_title' ); ?> </h2>
+        <div class="overlay-parent ">
+
     				       	<?php 
 								for ($x = 0; $x < 3; $x++) { ?>
-								<div class="col-md-4 col-xs-6">
-					    			<div class="overlay" style=''></div>
-							       <div class="block-google-filter">
+
+
+
+							       <div class="block-google-filter filter-overlay">
+                                   <div class="overlay">
+                                       <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                       <h5>Leeds</h5>
+
+                                       <button >BUTTON</button>
+                                   </div>
 							       	<div class="map"></div>
 					               </div>
 					                		        
-							     </div>
-
-							<?php } ?>	
 
 
-                		        
-		   
-		      </div>
-	     
+							<?php } ?>
+        </div>
+	</div>
+
 	        
-   	            	
-	           
-	                    
-	        
-	 <?php // } } ?>
+
 	</div>
 </div>
 

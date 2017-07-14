@@ -60,7 +60,7 @@
     overflow-y: auto;
   }
 
-  @media (min-width: 1040px) {
+  @media (min-width: 965px !important) {
     width: auto;
     border-top: 0;
     box-shadow: none;
@@ -381,7 +381,7 @@
   }
   .navbar-right {
     float: right !important;
-  margin-right: -$navbar-padding-horizontal;
+    margin-right: -$navbar-padding-horizontal;
 
     ~ .navbar-right {
       margin-right: 0;

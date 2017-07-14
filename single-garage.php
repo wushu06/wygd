@@ -1,15 +1,16 @@
+<?php get_header(); ?>
+
 <div class="block block-carousel">
     <div class="container">
  
         
-            <div class="row ">
-                <div class="block-carousel-images">
-            	
+            <div class="row block-carousel-images">
+                
                                    
-            		<div class="carousel">
+                    <div class="carousel">
                     <?php if( $images = theme( 'gallery' ) ) { ?>
                     <?php foreach( $images as $i => $image ) { ?>
-                   		
+                        
                             <img src="<?php echo $image['url']; ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width='300px'  />
                             
                         
@@ -28,17 +29,17 @@
                           <a class="image-prev" href="<?php echo $prev_post->guid ?>">PREV</a>
                     <?php endif ?>
                
-             </div>
+             
             </div>
             <div class="row block-carousel-content">
-            <h3><?php echo theme( 'title' ) ?></h3>
-			  <div class="col-md-8">
-			  	<!-- Buttons -->
-			  	<a><?php echo theme('button_one') ?> </a>  <a><?php echo theme('button_two') ?></a>
-			  </div>
-			  <div class="col-md-4">
-			  	<!-- social media -->
-			  	  <?php if( $facebook = theme('social_accounts', 'facebook') ) { ?>
+            <h3><?php  the_title();  ?></h3>
+              <div class="col-md-8">
+                <!-- Buttons -->
+                <a>WANT THIS DOOR </a>  <a>BACK TO GALLERY</a>
+              </div>
+              <div class="col-md-4">
+                <!-- social media -->
+                  <?php if( $facebook = theme('social_accounts', 'facebook') ) { ?>
                 <a href="<?php echo $facebook ?>" class="social" title="Facebook" target="blank"><i class='fa fa-facebook-official' ></i>
                 </a>
             <?php } ?>
@@ -49,10 +50,16 @@
             <?php } ?>
 
          
-			  </div>
-			</div>
+              </div>
+            </div>
 
  
 
     </div>
 </div>
+
+
+
+
+
+<?php get_footer(); ?>

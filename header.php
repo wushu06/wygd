@@ -19,7 +19,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Ek+Mukta:300,400|Josefin+Sans:400,400i,600,700" rel="stylesheet">
   
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800,600,500,400,200" rel="stylesheet">
+
      
     <?php wp_head(); ?>
 
@@ -49,11 +50,6 @@
                   ?>   
         </div>
 
-
-
-
-
-
         <div >
           <div class="navbar-header">
             
@@ -82,50 +78,62 @@
 
 <div >
   <div calss='btn-container hidden'>
-  <a class="survey-btn " id="btn-survey">book a free <br> site survey</a>
+  <a class="survey-btn " id="btn-survey">BOOK A <strong> FREE </strong><br> SITE SURVEY</a>
 
 </div>
  </div>
 
+ <!-- Calling survey form -->
 
-<div class='form-survey ' id='survey-form'>
-  <span id="close"> &#10006;</span>
-<h4>Book your <strong>free</strong> site <br> survey now!</h4>
-<p>Whether you need a service, repair or completely new garage door, the first thing we will do is perform a FREE site survey generate your quote.</p>
-
-<?php gravity_form(6, false, false, false, '', false, false);?>
-<i class="fa fa-arrow-right arrow-date" aria-hidden="true"></i>
-<p><input id="pickTime" type="text" class="time" placeholder="CHOOSE A TIME"/></p>
-<i class="fa fa-arrow-right arrow-time" aria-hidden="true"></i>
+<?php
+if ( is_page( 'Thank you' )) {  ?>
+<div class='form-survey-two ' style='display: block;'>
+  <span id="closeThree"> &#10006; CLOSE</span>
+  <p>Thanks</p>
 
 
-<button id='available'>Check avialibility</button>
-<input type='submit' value='NEXT' calss='next-form' id='next-form'>
-
-<p class='form-parag'><span class='select-date'>Please select a date and time</span></p>
-
-<span class='select-time'>Please select a time</span>
+ 
 
 
- </div>
+ </div>  
+
+<?php } else { 
+  
+?>
+<div class='form-survey ' id='survey-form' >
+    <span id="close"> &#10006;  CLOSE</span>
+  <h4>Book your <strong>free</strong> site <br> survey now!</h4>
+  <p>Whether you need a service, repair or completely new garage door, the first thing we will do is perform a <strong> FREE</strong>  site survey generate your quote.</p>
+    <?php gravity_form(6, false, false, false, '', false, false);?>
+  <i class="fa fa-arrow-right arrow-date" aria-hidden="true"></i>
+<p><input id="pickTime" type="text" class="time" placeholder="CHOOSE A TIME" value=""/></p>
+  <i class="fa fa-arrow-right arrow-time" aria-hidden="true"></i>
+
+
+  <button id='available'>Check avialibility</button>
+  <input type='submit' value='NEXT' calss='next-form' id='next-form'>
+
+  <p class='form-parag'><span class='select-date'>Please select a date and time</span></p>
+
+  <span class='select-time'>Please select a time</span>
+
+
+</div>
+
 <div class='form-survey-two ' id='survey-form-two'>
-<span id="closeTwo"> &#10006;</span>
-<p>Book your <strong>free</strong> site <br> survey now!</p> <br>
+<span id="closeTwo"> &#10006; CLOSE</span>
+
 <?php // gravity_form( 6, false, false, true, '', false ); ?>
 
-<?php gravity_form(8, false, false, false, '', false, false);?>
+    <?php gravity_form(8, false, false, false, '', false, false);?>
 
 
  </div>
 
- <!-- .squaredOne -->
-    <div class="squaredOne">
-      <input type="checkbox" value="None" id="squaredOne" name="check" checked />
-      <label for="squaredOne"></label>
-    </div>
+<?php } ?>
 
 
-           
+
 
          
 

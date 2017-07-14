@@ -1,50 +1,106 @@
-<?php
-get_header();
+<?php get_header(); ?>
 
+<div class="block block-choose">
+    <div class="container">
+		 <?php  $category = get_the_category(); ?>
+   
+		        	<div class="row block-choose-row" data-res="1060">
+			            <div class="col-md-6  block-choose-img text-center align-self-start">
+			           	<a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Aluminum side sectional garage doors' ) ) ); ?>" >
 
-get_page_structure( 'page_structure' );
-
-// Now that we have the header area sorted we can generate our posts
-if ( have_posts() ) {
-	?>
-
-	<div class="block block--breakdown">
-	    <div class="container">
-
-	    	<?php while ( have_posts() ) { the_post(); ?>
-
-		        <div class="row row-equal breakdown js-fade--right" data-res="1060">
-
-        			<?php if ( has_post_thumbnail() ) { ?>
-
-			            <div class="breakdown__image large-9 columns text-center">
-			                <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( get_the_title() ); ?>">
-			                	<img src="<?php echo the_post_thumbnail_url( 'technical' ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" class="img-responsive" />
-			                </a>
+			                <img src="<?php echo get_template_directory_uri(); ?>/images/home.jpg" class="img-responsive"  />
+			             </a> 
 			            </div>
 
-			        <?php } ?>
+			            <div class="col-md-6 block-choose-content">
+			            	<div class="content-wrap">
+			                    <h2 class="block__title h3 t-brand">Aluminum side sectional garage doors </h2>
 
-		            <div class="bg-gray <?php echo ( has_post_thumbnail() ) ? 'large-15' : 'large-24'; ?> columns end">
-		            	<div class="breakdown__content">
-		                    <h2 class="block__title h3 t-brand">
-			                	<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" class="t-brand title-link">
-			                		<?php echo get_the_title(); ?>
-			                	</a>
-			                </h2>
 
-			            	<span class="divide divide--gradient divide--less-pad"></span>
 
-		                    <p><?php echo get_the_excerpt(); ?></p>
-		                </div>
-		            </div>
-		        </div>
+			                    <?php //echo $item['body']; ?>
+			                </div>
+			            </div>
+		        	</div>
+		      
+		         <div class="row block-choose-row" data-res="1060">
 
-			<?php } ?>
+		         	    <div class="col-md-6 block-choose-content">
+			            	<div class="content-wrap" >
+			                    <h2 class="block__title h3 t-brand">Steel sectional garage doors</h2>
 
-		</div>
-	</div>
-<?php
-}
 
-get_footer();
+			                  
+			                </div>
+			            </div>
+			            <div class="col-md-6 block-choose-img ">
+			            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Steel sectional garage doors' ) ) ); ?>">
+
+			                <img src="<?php echo get_template_directory_uri(); ?>/images/home.jpg"   class="img-responsive" />
+			            </a>
+			            </div>
+			            
+
+			        
+		        	</div>
+		       
+	
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <?php // $category = get_the_category(); ?>
+               
+
+                	<!--<a href="<?php //echo get_permalink( get_option( 'page_for_posts' ) ); ?>" >View Everything</a> &nbsp; 
+                	<a href="<?php //echo esc_url( get_category_link( get_cat_ID( 'Aluminum side sectional garage doors' ) ) ); ?>" >Aluminum side sectional garage doors</a> &nbsp; 
+                	<a href="<?php //echo esc_url( get_category_link( get_cat_ID( 'Steel sectional garage doors' ) ) ); ?>">Steel sectional garage doors</a>-->
+        
+
+            <?php // if ( have_posts() ) : ?>
+           
+            		<?php
+                   // while ( have_posts() ) : the_post();
+            		//	$category = get_the_category();
+
+                      //  $category_slug = ( $category[0]->slug == 'uncategorised' ) ? 'news' : $category[0]->slug;
+
+ 
+       //    the_title(); 		//endwhile;
+                    ?>
+        	
+        	<?php //endif; ?>
+
+        
+
+
+<?php get_footer(); ?>

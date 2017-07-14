@@ -1,3 +1,6 @@
+
+
+
 <div class="block block-choose">
     <div class="container">
 
@@ -7,12 +10,14 @@
     			
 		        <?php if( $i % 2 == 0 ) { ?>
 		        	<div class="row block-choose-row" data-res="1060">
-			            <div class="col-md-6 block-choose-img text-center">
-			                <img src="<?php echo $item['image']['sizes']['technical']; ?>" title="<?php echo esc_attr( $item['title'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>" class="img-responsive" />
+			            <div class="col-md-6  block-choose-img text-center align-self-start">
+			            
+			                <img src="<?php echo $item['image']['sizes']['technical']; ?>" title="<?php echo esc_attr( $item['title'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>" class="img-responsive"  />
+			                
 			            </div>
 
 			            <div class="col-md-6 block-choose-content">
-			            	<div >
+			            	<div class="content-wrap">
 			                    <h2 class="block__title h3 t-brand"><?php echo $item['title']; ?></h2>
 
 
@@ -25,7 +30,7 @@
 		         <div class="row block-choose-row" data-res="1060">
 
 		         	    <div class="col-md-6 block-choose-content">
-			            	<div >
+			            	<div class="content-wrap" >
 			                    <h2 class="block__title h3 t-brand"><?php echo $item['title']; ?></h2>
 
 
@@ -33,8 +38,10 @@
 			                </div>
 			            </div>
 			            <div class="col-md-6 block-choose-img ">
+			            
 			                <img src="<?php echo $item['image']['sizes']['technical']; ?>" title="<?php echo esc_attr( $item['title'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>" class="img-responsive" />
 			            </div>
+			            
 
 			        
 		        	</div>
