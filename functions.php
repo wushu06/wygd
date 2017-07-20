@@ -114,6 +114,13 @@ class westYorkshire {
 		add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 
+		/*
+		* Excerpt
+		 */
+		
+		
+
+
 	}
 	function my_acf_google_map_api( $api ){
 	
@@ -219,8 +226,14 @@ class westYorkshire {
 		return $classes;
 	}
 
+	
+
 }
 
 // Here we go! - Mario, 2017
 new westYorkshire;
 require_once('wp-bootstrap-navwalker.php');
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

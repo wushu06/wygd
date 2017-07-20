@@ -78,64 +78,68 @@
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-<div calss='btn-container '>
-  <a class="survey-btn " id="btn-survey">BOOK A <strong> FREE </strong><br> SITE SURVEY</a>
+      <!--/.Book free survey button -->
+      <div calss='btn-container '>
+        <a class="survey-btn " id="btn-survey">BOOK A <strong> FREE </strong><br> SITE SURVEY</a>
 
-</div>
+      </div>
  </header>
 
 
 
 
 
- <!-- Calling survey form -->
+ <!-- Calling Thank you msg -->
 
 <?php
 if ( is_page( 'Thank you' )) {  ?>
-<div class='form-survey-two ' style='display: block;'>
-  <span id="closeThree"> &#10006; CLOSE</span>
-  <p>thank you for your enquiry. we will be in touch shortly</p>
+  <div class='form-survey-two ' style='display: block;'>
+    <span id="closeThree"> &#10006; CLOSE</span>
+    <p>Thank you for your enquiry. we will be in touch shortly</p>
+      <div id="message"></div>
 
 
- 
+   
 
 
- </div>  
+   </div>  
 
-<?php } else { 
+<?php } 
   
 ?>
+<!--/.Calling form survey -->
+
 <div class='form-survey ' id='survey-form' >
     <span id="close"> &#10006;  CLOSE</span>
-  <h4>Book your <strong>free</strong> site <br> survey now!</h4>
-  <p>Whether you need a service, repair or completely new garage door, the first thing we will do is perform a <strong> FREE</strong>  site survey generate your quote.</p>
-    <?php gravity_form(6, false, false, false, '', false, false);?>
-  <i class="fa fa-arrow-right arrow-date" aria-hidden="true"></i>
-<p><input id="pickTime" type="text" class="time" placeholder="CHOOSE A TIME" value=""/></p>
-  <i class="fa fa-arrow-right arrow-time" aria-hidden="true"></i>
+    <h4>Book your <strong>free</strong> site <br> survey now!</h4>
+    <p>Whether you need a service, repair or completely new garage door, the first thing we will do is perform a <strong> FREE</strong>  site survey generate your quote.</p>
+      <?php gravity_form(6, false, false, false, '', false, false);?>
+    <i class="fa fa-arrow-right arrow-date" aria-hidden="true"></i>
+  <p><input id="pickTime" type="text" class="time" placeholder="CHOOSE A TIME" value=""/></p>
+    <i class="fa fa-arrow-right arrow-time" aria-hidden="true"></i>
 
 
-  <button id='available'>Check avialibility</button>
-  <input type='submit' value='NEXT' calss='next-form' id='next-form'>
+    <button id='available'>Check avialibility</button>
+    <input type='submit' value='NEXT' calss='next-form' id='next-form'>
 
-  <p class='form-parag'><span class='select-date'>Please select a date and time</span></p>
+    <p class='form-parag'><span class='select-date'>Please select a date and time</span></p>
 
-  <span class='select-time'>Please select a time</span>
+    <span class='select-time'>Please select a time</span>
 
 
 </div>
 
 <div class='form-survey-two ' id='survey-form-two'>
 <span id="closeTwo"> &#10006; CLOSE</span>
-
+ 
 <?php // gravity_form( 6, false, false, true, '', false ); ?>
-
+ 
     <?php gravity_form(8, false, false, false, '', false, false);?>
-
+ 
 
  </div>
 
-<?php } ?>
+<?php  ?>
 
 
 

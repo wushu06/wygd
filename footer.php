@@ -34,9 +34,9 @@
 
         <div class="footer-links pull-right">
             <p>
-            <a href="<?php echo site_url( 'terms' ); ?>" title="Terms &amp; Conditions">T&amp;Cs</a>
+            <a href="<?php echo site_url( 'terms' ); ?>" title="Terms &amp; Conditions">TERMS</a>
              &nbsp; | &nbsp; 
-            <a href="<?php echo site_url( 'privacy' ); ?>" title="Privacy Policy">Privacy Policy</a>
+            <a href="<?php echo site_url( 'privacy' ); ?>" title="Privacy Policy">PRIVACY</a>
          </p>
       </div>
 

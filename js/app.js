@@ -1,12 +1,5 @@
 jQuery(document).ready(function($) {
 
-  /* trigger flowType */ 
- //$("body").fitText(1.2, { minFontSize: '12px', maxFontSize: '30px' });
- 	/* Slick */
-	/*$('.carousel').slick({
-        nextArrow: '<a type="button" class="custom-next">NEXT</a>',
-        prevArrow: '<a type="button" class="custom-prev">PREV</a>'
-    });*/
 
     /* Mobile Menu */ 
       // Show the mobile menu when open button is clicked
@@ -15,7 +8,7 @@ jQuery(document).ready(function($) {
 
 		$( '.mobile-nav' ).toggleClass( 'menu-active' );
     $('#survey-mobile').fadeToggle();
-	});
+	 });
 
     /* center element */
     $.fn.centerMe = function ($position) {
@@ -32,7 +25,9 @@ jQuery(document).ready(function($) {
       $('.button-call').centerMe('fixed');
      
 
-    });
+    }); 
+
+    /* Change wording and position of call button  */
    
     $(window).on('load resize', function(){
       if ($(window).width() <= 1040){  
@@ -50,6 +45,8 @@ jQuery(document).ready(function($) {
 
       }
     });
+
+    /* toggle class for single garage door */
      $(window).on('load resize', function(){
       if ($(window).width() <= 991 ){  
         $('#removeCol').removeClass('col');
@@ -61,41 +58,26 @@ jQuery(document).ready(function($) {
       }
     });
 
-    /* element takes window height */
-    /*$.fn.fullHeight = function () {
-        $(this).height($(window).height());
-
-    };
-    $('.block').fullHeight();*/
-
-    /* */
-
-   /* var $grid = $( '.js-masonry' ).imagesLoaded( function() {
-        // init Isotope after all images have loaded
-        $grid.isotope({
-            itemSelector: '.columns',
-            masonry: {
-                columnWidth: '.columns--sizer'
-            }
-        });
-    });*/
+    /* Masonry for gallery page */
     $('.grid').isotope({
       itemSelector: '.grid-item', 
       masonry: {
-        columnWidth: 100
+        columnWidth: 5
       }
     });
+
+    /** Drop down menu making link active (check nav walker) **/
     $('.navbar .dropdown').hover(function() {
-$(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+      $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
 
-}, function() {
-$(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+      }, function() {
+      $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
 
-});
+      });
 
-$('.navbar .dropdown > a').click(function(){
-location.href = this.href;
-});
+      $('.navbar .dropdown > a').click(function(){
+      location.href = this.href;
+      });
 
     /* Show the survey form */
 
@@ -104,20 +86,10 @@ location.href = this.href;
     var formTwo = $('#survey-form-two');
     var close = $('.block, #close, #closeTwo, #closeThree');
     var next = $('#next-form');
-
-    /*btn.on('click', function(){
-      form.fadeIn();
-    
-
-      close.on('click', function(){
-      form.fadeOut();
-      formTwo.hide();
+    $('#closeThree, .block').on('click', function(){
+      $('.form-survey-two').fadeOut();
+    });
       
-      //$('.form-survey-two').css('display', 'none');
-
-    })
-    });*/
-    
     $( btn ).on('click', function(){
       $('#survey-mobile').fadeOut();
       $( form).fadeIn(  function() {
@@ -125,6 +97,7 @@ location.href = this.href;
          $(close).on('click', function (){
              form.fadeOut();
              formTwo.hide();
+             $('.form-survey-two').hide();
              $('#survey-mobile').fadeIn();
 
          });
@@ -135,22 +108,27 @@ location.href = this.href;
       form.fadeOut();
       formTwo.fadeIn();
     });
+
     /* Validate survey form */
 
-    $('#gform_8').on('submit', function(e) {
-      var input1 = ('#input_8_7'),
-          input2 = ('#input_8_9');
-       
+    $('#gform_submit_button_8').on('click', function(e) {
+    
+      
+   
+      if (   $( '#input_8_7' ).val()  !== ""   && $( '#input_8_9').val() !== "" &&
+             $( '#input_8_10' ).val() !== ""   && $( '#input_8_11').val() !== "" &&
+             $( '#input_8_7' ).val()   !== ""   && $( '#input_8_9').val() !== ""  &&
+             $( ' #input_8_12' ).val() !== ""   && $( '#input_8_13').val() !== "" ) 
+          {
      
-      if (   $( input1 ).val() !== ""   && $( input2 ).val() !== "" 
-         ) {
-       alert('not');
-        $('#gform_8')[0].submit();  
+          $('#gform_8')[0].submit();  
+         
+          
                 
           }else {
             e.preventDefault();
-            $(input1).addClass('select-field');
-            alert('is');
+            $(":input").addClass('select-field');
+           
         
           }
          
@@ -158,44 +136,9 @@ location.href = this.href;
       });
 
 
-    $("#gform_submit_button_8").click(function(event){
-  var form_data=$("#contact").serializeArray();
-  var error_free=true;
-  for (var input in form_data){
-    var element=$("#contact_"+form_data[input]['name']);
-    var valid=element.hasClass("valid");
-    var error_element=$("span", element.parent());
-    if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
-    else{error_element.removeClass("error_show").addClass("error");}
-  }
-  if (!error_free){
-    event.preventDefault(); 
-  }
-  else{
-    alert('No errors: Form will be submitted');
-  }
-});
 
 
     
-      //var input = ('#input_8_7, #input_8_9, #input_8_10, #input_8_11, #input_8_12, #input_8_13');
-
-     /*$(input).on('blur focus', function(){
-            if($(this).val() === '') {
-             
-                $(this).css({
-                'background': '#fff'
-              });
-            }else {
-            
-                $(this).css({
-                'background': '#d2eaea'
-              });
-            }
-          })*/
-    
-
-  
 
   /* Book free survey date picker */
 
@@ -236,20 +179,27 @@ location.href = this.href;
     
 
   });
+ 
+  /* init date picker */
   $('#pickTime').timepicker({ 'scrollDefault': 'now' });
-  
+
+  /* Register cookies  */
   $(window).on('load' , function () {
-
-   /* var newdate = $('#newDate');
-    // newdate.attr('placeholder',$.cookie('name'));
-    newdate.attr('placeholder', $.cookie('name')) ;*/
-
-    //console.log(newdate);
-    $('#newDate').on('keyup', function () {
-        var date = $(this).val();
-        $.cookie('name', date , { expires: 7, path: '/' });
-        console.log($.cookie('name'));
-
+        var d = $.cookie('date');
+        var t = $.cookie('time');
+        var n = $.cookie('name');
+ 
+    $('#message').html('Name: ' + n + '<br>'+' Date: ' + d + ' at: ' + t) ;
+    $(window).on('click', function () {
+        var date = $('#input_6_9').val();
+        var time = $( '#pickTime').val();
+        var name = $('#input_8_7').val();
+        $.cookie('date', date , { expires: 7, path: '/' });
+        $.cookie('time', time , { expires: 7, path: '/' });
+        $.cookie('name', name , { expires: 7, path: '/' });
+        
+        
+        
 
     });
 

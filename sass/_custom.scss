@@ -4,6 +4,7 @@ body {
 	width: 100%;
 	font-family: 'Montserrat', sans-serif;
 }
+body, html { overflow-x:hidden; }
 a:hover {
   text-decoration:none;
 }
@@ -303,9 +304,19 @@ button.active {
     position: relative;
 }
 
-#close, #closeTwo {
+#close, #closeTwo, #closeThree {
 	cursor: pointer;
 	    margin: 35px;
+}
+.form-survey-two {
+  p {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  #message {
+    margin-left: 35px;
+  }
 }
 
 /* Blocks Styling */
@@ -775,8 +786,11 @@ button.active {
 /*Block Post*/
 
 .block-post {
-  margin-top: 90px;
 
+    margin: 150px auto 0px;
+    .col-md-6 {
+      padding: 0;
+    }
     .post-image {
       max-width: 400px;
       img {
@@ -793,27 +807,49 @@ button.active {
       }
       .colors {
         margin-bottom: 250px;
+        max-width: 400px;
+        @media (max-width: 991px) {
+          margin: 50px auto 250px;
+        }
         span {
         border:20px solid transparent;
         margin-bottom: 10px;
         float: left;
         margin-right: 10px;
+
         }
       }
      
     
     .post-text {
-      padding-left: 25px;
+      padding-left: 20px;
+      margin-top: -15px;
       ul {
         padding:0;
         margin-bottom: 40px;
+        @media (max-width: 991px) {
+          padding: 15px;
+        }
       }
-      ul li {
+      ul {
+      
+        li {
         list-style: none;
-        border-bottom: 1px solid $main-color;
-        width: 80%;
+        width: 100% !important;
         padding: 7px 0px;
+        position: relative;
+        
+        &:not(:last-child):after{
+          content: '';
+          width: 80%;
+          height: 1px;        
+          position:absolute;
+          left:0;
+          bottom: 0;
+          background: $main-color;
+        }
       }
+    }
       .social {
         margin-top: 35px;
       }
@@ -826,14 +862,21 @@ button.active {
       margin: auto;
     }
     .row:last-child {
-          margin: 100px auto 20px;
+       margin: 100px auto 20px;
       max-width: 900px;
       h2 {
         font-weight: normal;
       }
+      .col-md-5 {
+        min-width: 400px;
+        padding: 0;
+      }
+      .col-md-1 {
+        min-width: 100px;
+      }
     }
     .row:last-child .title-post {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
     .post-text-two {
       margin-bottom: 20px;
@@ -844,6 +887,11 @@ button.active {
       img {
         margin: 20px auto;
         width: 100%;
+        min-height: 400px;
+        @media (max-width: 991px){
+            min-height: 300px;
+          max-width: 300px;
+        }
       }
     }
     @media (max-width: 991px ) {
@@ -1070,26 +1118,41 @@ button.active {
 .footer {
 	  margin-top: 50px;
     background: #241d35;
-    height: 50px;
-    padding: 15px;
+    height: 75px;
+    padding: 20px 50px;
     color: #fff;
     position: absolute;
    
     width: 100%;
+    @media (max-width: 991px){
+      padding: 10px 5px;
+      height: auto;
+      p{
+          margin-top: 10px;
+      
+       }
+    
+    }
 
-
+    .socila {
+       margin: 23px 50px;
+    }
     a{
     	color: #fff;
+      margin-left: 10px;
+      margin-right: 5px;
+      font-size: 10px;
     }
 
     i {
 	    color: #241d35;
 	    background: #fff;
 	    border-radius: 50%;
-	    padding: 5px;
-	    width: 30px;
+      padding: 10px 8px;
+      width: 35px;
+      font-size: 18px;
     }
-    
+
 
 }
 
