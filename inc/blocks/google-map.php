@@ -9,9 +9,11 @@
 	            		<h5><?php echo theme( 'small_title' ); ?></h5>
 	            	<h2><?php echo theme( 'title' ); ?></h2>
 	            	<?php echo theme( 'body' ); ?>
+                 
 	                </div>
 	            </div>    
 	        </div> 
+             
 	</div>
 
 

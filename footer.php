@@ -1,10 +1,15 @@
-    <footer class="footer text-center">
+       <?php // if ( !is_front_page() ) :  ?>
+   
 
-         <?php // if ( !is_front_page() ) :  ?>
-            
-                <button class="button-call" href='#'>FOR SAME DAY REAPAIRS CALL <strong> 01924 849 579 </strong></button>
+    <div class="button-call-wrapper">
+        <button id="survey-mobile" class="button-call" href='#'>FOR SAME DAY REAPAIRS CALL <strong> 01924 849 579 </strong></button>
+    </div>
             
             <?php // endif; ?> 
+
+    <footer class="footer text-center">
+
+      
             
         <div class="social social--footer pull-left">
             <?php if( $facebook = theme('social_accounts', 'facebook') ) { ?>

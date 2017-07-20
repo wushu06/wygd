@@ -1,6 +1,6 @@
-<?php
+<?php 
 
-	$args = array(
+	/*$args = array(
 	    // Only get published posts..
 	    'post_type'              => array( 'door_style' ),
 	    'post_status'            => array( 'publish' ),
@@ -20,77 +20,96 @@
 	);
 
 	// The Query
-	$garage = new WP_Query( $args );
+	$garage = new WP_Query( $args );*/
+
+	$categories = get_categories( array(
+    'orderby' => 'name',
+    'order'   => 'ASC'
+) );
+ 
+
 
 
 ?>
-<?php 
-// $cat_args =  array('orderby' => 'name'  );
 
- // wp_list_categories();
+ 
 
-
- ?>
 
 <div class="block block-choose">
     <div class="container">
-		 <?php  $category = get_the_category(); ?>
+		
 		 <p class="text-center "><a href="#"  class="small-title">GARAGE DOORS</a></p>
-		 <h2 class="text-center">Choose a garage door style</h2>
-   
+		 <h2 class="text-center big-title">Choose a garage door style </h2>
+		 <div class="row">	
+
+		 			<?php $i = 0; ?>
+   					<?php foreach( $categories as $category ) {
+   						  $category_link = sprintf( 
+					        '<a href="%1$s" alt="%2$s">%3$s</a>',
+					        esc_url( get_category_link( $category->term_id ) ),
+					        esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
+					        esc_html( $category->name )
+					    );
+   						?>
+   						<?php //if( $i % 2 == 0 ) { ?>
+					<div class="col-md-12 col-xs-6">
 		        	<div class="row block-choose-row" data-res="1060">
 		        	
-			            <div class="col-md-6  block-choose-img text-center align-self-start">
+			            <div class="col-md-6 col-xs-6 <?php if( $i % 2 == 0 ) {echo'right';}else{echo 'left';} ?> block-choose-img text-center ">
 			            	<div class="choose-wrap">
-					           	<a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Aluminum side sectional garage doors' ) ) ); ?>" >
+					           	<a href="<?php echo esc_url( get_category_link( $category->term_id ) ) ?>" >
 
 					                <img src="<?php echo get_template_directory_uri(); ?>/images/300x300_switch.png" class="img-responsive"  />
 					             </a>
+
 					        </div>      
 			            </div>
-
-			            <div class="col-md-6 col-xs-12 block-choose-content">
+					
+					
+			            <div class="col-md-6 col-xs-6 block-choose-content">
 			            	<div class="content-wrap">
-			                    <h2 class="block__title h3 t-brand">Aluminum side sectional garage doors </h2>
+			                    <h2 class="block__title h3 t-brand"> <?php echo $category->name?>  </h2>
+			                  
+			                    <p><?php echo $category->description; ?></p>
 			                    <div>
-			                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis pretium diam, sed congue ipsum.</p>
-			                   <a class="choose-link" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Aluminum side sectional garage doors' ) ) ); ?>">VIEW OUR RANGE</a>
+			                   <a class="choose-link" href="<?php echo esc_url( get_category_link( $category->term_id ) ) ?>">VIEW OUR RANGE</a>
 								</div>
 
 
 			                    <?php //echo $item['body']; ?>
 			                </div>
-			            </div>
-			            </div>
-		        	
+			           
+			           </div>  
+			           </div>  
+			    </div><!--End block choose row-->
+			           <?php ++$i; ?>
+			            <?php } //} ?>
+		        </div>	 
 		      
-		         <div class="row block-choose-row" data-res="1060">
-					<div class="row-container-two">
-		         	    <div class="col-md-6 block-choose-content">
-			            	<div class="content-wrap" >
-			                    <h2 class="block__title h3 t-brand">Steel sectional garage doors</h2>
-
-
-			                  
-			                </div>
-			            </div>
-			            <div class="col-md-6 block-choose-img ">
-			            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Steel sectional garage doors' ) ) ); ?>">
-
-			                <img src="<?php echo get_template_directory_uri(); ?>/images/300x300_switch.png"   class="img-responsive" />
-			            </a>
-			            </div>
-			            
-
-			        </div>
-		        	</div>
+		         
 		       
 	
 
-        </div>
+        </div> <!--End container-->
    
 </div>
-             
-           
-       
+    
+ <?php /*foreach( $categories as $category ) {
+    $category_link = sprintf( 
+        '<a href="%1$s" alt="%2$s">%3$s</a>',
+        esc_url( get_category_link( $category->term_id ) ),
+        esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
+        esc_html( $category->name )
+    );
+     
+    echo '<p>' . sprintf( esc_html__( 'Category: %s', 'textdomain' ), $category_link ) . '</p> ';
+    echo '<p>' . sprintf( esc_html__( 'Description: %s', 'textdomain' ), $category->description ) . '</p>';
+    echo '<p>' . sprintf( esc_html__( 'Post Count: %s', 'textdomain' ), $category->count ) . '</p>';
+
+    echo $category->name ;
+    echo $category_link ;
+    echo $category->description;
+}*/
+ ?>
+      
    

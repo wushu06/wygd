@@ -96,6 +96,7 @@ class westYorkshire {
 		 */
 
 		add_action( 'init', array( $this, 'westYokshire_init' ) );
+	
 
 		/**
 		 * Additional active menu classes.
@@ -174,13 +175,15 @@ class westYorkshire {
 	 * @since 1.0.1
 	 * @access public
 	 */
+	
+	// Register Custom Navigation Walker
+	
 
 	public function westYokshire_init() {
 		// Register our menus.
 		register_nav_menus( array(
-			'top-nav'     => __( 'Top Navigation', 'wygd' ),
-			'mobile-nav'  => __( 'Mobile Navigation', 'wygd' ),
-			'footer-nav'  => __( 'Footer Navigation', 'wygd' )
+			
+			'primary'  => __( 'Primary Menu', 'wygd' )
 		) );
 
 		// Register our image sizes.
@@ -220,3 +223,4 @@ class westYorkshire {
 
 // Here we go! - Mario, 2017
 new westYorkshire;
+require_once('wp-bootstrap-navwalker.php');

@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php get_header();
+    // Custom post for gallery (garages)
+
+ ?>
 
 <div class="block block-carousel">
     <div class="container">

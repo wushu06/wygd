@@ -30,7 +30,7 @@
 
 <header >
      <!-- Static navbar -->
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-fixed-top">
         <div class="menu-button">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -39,13 +39,12 @@
 
         <div class="mobile-nav ">
                 <?php 
-                      $arg = array(
-                              'menu' => 'top-nav',
-                              'menu_class' => 'nav navbar-nav',
-                              'container' => 'false'
-
-                          );
-                        wp_nav_menu($arg);
+                     $arg = array(
+                      'menu' => 'primary' ,
+                      'menu_class' => 'mobile-nav',
+                      'container' => 'false'
+                       );
+                     wp_nav_menu ($arg);
 
                   ?>   
         </div>
@@ -59,29 +58,35 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse pull-right">
                    <?php 
-                    $arg = array(
-                            'menu' => 'top-nav',
-                            'menu_class' => 'nav navbar-nav',
-                            'container' => 'false'
-
-                        );
-                      wp_nav_menu($arg);
+                 
+                                  wp_nav_menu( array(
+                'menu'              => 'primary',
+                'theme_location'    => 'primary',
+                'depth'             => 2,
+                'container'         => 'false',
+             
+                'menu_class'        => 'nav navbar-nav disabled',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker())
+            );
 
                 ?>
+
                                      
 
            
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
- </header>
-
-<div >
-  <div calss='btn-container hidden'>
+<div calss='btn-container '>
   <a class="survey-btn " id="btn-survey">BOOK A <strong> FREE </strong><br> SITE SURVEY</a>
 
 </div>
- </div>
+ </header>
+
+
+
+
 
  <!-- Calling survey form -->
 
@@ -89,7 +94,7 @@
 if ( is_page( 'Thank you' )) {  ?>
 <div class='form-survey-two ' style='display: block;'>
   <span id="closeThree"> &#10006; CLOSE</span>
-  <p>Thanks</p>
+  <p>thank you for your enquiry. we will be in touch shortly</p>
 
 
  

@@ -3,7 +3,7 @@
 <div class="block block-choose">
     <div class="container">
 		 <?php  $category = get_the_category(); ?>
-   
+
 		        	<div class="row block-choose-row" data-res="1060">
 			            <div class="col-md-6  block-choose-img text-center align-self-start">
 			           	<a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Aluminum side sectional garage doors' ) ) ); ?>" >
@@ -34,7 +34,7 @@
 			                </div>
 			            </div>
 			            <div class="col-md-6 block-choose-img ">
-			            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Steel sectional garage doors' ) ) ); ?>">
+			            <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Up & Over Steel Garage Doors' ) ) ); ?>">
 
 			                <img src="<?php echo get_template_directory_uri(); ?>/images/home.jpg"   class="img-responsive" />
 			            </a>
