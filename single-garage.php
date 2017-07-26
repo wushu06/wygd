@@ -38,19 +38,11 @@
             <h3><?php  the_title();  ?></h3>
               <div class="col-md-8">
                 <!-- Buttons -->
-                <a>WANT THIS DOOR </a>  <a>BACK TO GALLERY</a>
+                <a href="#">WANT THIS DOOR </a>  <a href="<?php echo site_url() ?>/gallery">BACK TO GALLERY</a>
               </div>
               <div class="col-md-4">
                 <!-- social media -->
-                  <?php if( $facebook = theme('social_accounts', 'facebook') ) { ?>
-                <a href="<?php echo $facebook ?>" class="social" title="Facebook" target="blank"><i class='fa fa-facebook-official' ></i>
-                </a>
-            <?php } ?>
-
-            <?php if( $twitter = theme('social_accounts', 'twitter') ) { ?>
-                <a href="<?php echo $twitter ?>" class="social" title="Twitter" target="blank"><i class='fa fa-twitter-square' ></i>
-                </a>
-            <?php } ?>
+              <?php do_action( 'addthis_widget', get_permalink(), get_the_title(), 'small_toolbox'); ?>
 
          
               </div>

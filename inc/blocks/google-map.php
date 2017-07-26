@@ -5,12 +5,19 @@
 	            <div class="col-md-12 block-height">
 	            	
 
-	            	<div class="block-google-body">
+	            	<div class="block-google-body js-fadeUp">
                   
 	            		<h5><?php echo theme( 'small_title' ); ?></h5>
 	            	<h2><?php echo theme( 'title' ); ?></h2>
-	            	<?php echo theme( 'body' ); ?>
-                 
+                 <div class="content-image">
+                    <img src="<?php echo theme( 'image', 'url' ); ?>">
+
+                  </div>
+                  <div class="content-body">
+                    <?php echo theme( 'body' ); ?>
+                  </div>
+	            	
+                
 	                </div>
 	            </div>    
 	        </div> 
@@ -24,8 +31,8 @@
 	            	
 
 
-    <div class="row">
-	<div class='container block-filter-body'>
+   <!-- <div class="row">
+	<div class='container block-filter-body js-fadeUp'>
 	<h5><?php echo theme( 'small_filter_title' ); ?></h5>	
 	<h2 class="block-google-title text-center"><?php echo theme( 'filter_title' ); ?> </h2>
         <div class="overlay-parent ">
@@ -53,7 +60,7 @@
 
 	        
 
-	</div>
+	</div>-->
 </div>
 
 
@@ -61,7 +68,7 @@
    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
         
          <script type="text/javascript">
-            // When the window has finished loading create our google map below
+           /*// When the window has finished loading create our google map below
             google.maps.event.addDomListener(window, 'load', init);
         
             function init() {
@@ -99,7 +106,7 @@
                     title: 'Snazzy!'
                 }); 
             	}
-            }
+            }*/
         </script>
 
 

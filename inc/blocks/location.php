@@ -19,11 +19,11 @@
 
 
 
-<div class="block-location">
+<div class="block-location" style="<?php if(is_page('area')){ echo'margin: 150px auto';} ?>">
 <h6 class="text-center"><a href="#"><?php echo theme('small_title'); ?></a></h6>
-<h1 class="text-center"><?php echo theme('title'); ?></h1>
+<h2 class="text-center"><?php echo theme('title'); ?></h2>
 
-
+<div class="location-group">
 <?php   // The Loop
  if ( $areas->have_posts() ) {
 ?>
@@ -41,15 +41,23 @@
 				<div class="overlay">
 					<div class="text text-center">
 					 	<i class="fa fa-map-marker" aria-hidden="true"></i>
-						<h1><?php echo get_the_title() ; ?></h1>
+						<h2><?php echo get_the_title() ; ?></h2>
 						
 					</div>
 				</div>
+				 <div class="overlay-hover ">
+				 
+                   <i class="fa fa-map-marker" aria-hidden="true"></i>
+                   <h5 class="text-center"><?php echo get_the_title() ; ?></h5>
+
+                   <button >BUTTON STYLE</button>
+                   
+               </div>
 			</div> </a>
 		</div>
 
 <?php } } ?>		
-
+</div>
 
 
 

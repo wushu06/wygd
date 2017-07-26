@@ -38,7 +38,7 @@
 <div class="block block-choose">
     <div class="container">
 		
-		 <p class="text-center "><a href="#"  class="small-title">GARAGE DOORS</a></p>
+		 <p class="text-center js-fadeLeft "><a href="#"  class="small-title">GARAGE DOORS</a></p>
 		 <h2 class="text-center big-title">Choose a garage door style </h2>
 		 <div class="row">	
 
@@ -53,7 +53,7 @@
    						?>
    						<?php //if( $i % 2 == 0 ) { ?>
 					<div class="col-md-12 col-xs-6">
-		        	<div class="row block-choose-row" data-res="1060">
+		        	<div class="row block-choose-row" >
 		        	
 			            <div class="col-md-6 col-xs-6 <?php if( $i % 2 == 0 ) {echo'right';}else{echo 'left';} ?> block-choose-img text-center ">
 			            	<div class="choose-wrap">

@@ -10,7 +10,7 @@
     <div class="container">
 		
 		 <p class="text-center "><a href="#"  class="small-title">GARAGE DOORS</a></p>
-		 <h2 class="text-center big-title">Choose a garage door style </h2>
+		 <h2 class="text-center big-title scroll-animate">Choose a garage door styles </h2>
 		 <div class="row">	
 
 		 			<?php $i = 0; ?>
@@ -38,17 +38,19 @@
 					
 					
 			            <div class="col-md-6 col-xs-6 block-choose-content">
+			            	
 			            	<div class="content-wrap">
-			                    <h2 class="block__title h3 t-brand"> <?php echo $category->name?>  </h2>
+			                   <a href="<?php echo esc_url( get_category_link( $category->term_id ) ) ?>" > <h2 class="block__title h3 t-brand"> <?php echo $category->name?>  </h2> </a>
 			                  
 			                    <p><?php echo $category->description; ?></p>
 			                    <div>
-			                   <a class="choose-link" href="<?php echo esc_url( get_category_link( $category->term_id ) ) ?>">VIEW OUR RANGE</a>
+			                   <a class="choose-link " href="<?php echo esc_url( get_category_link( $category->term_id ) ) ?>">VIEW OUR RANGE</a>
 								</div>
 
 
 			                    <?php //echo $item['body']; ?>
 			                </div>
+
 			           
 			           </div>  
 			           </div>  

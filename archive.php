@@ -20,16 +20,17 @@
                   if($i % 2 == 0) {  
                   ?>
                   
-           <div id='removeCol' class="col col-xs-6">
+           <div  class="col removeCol col-xs-6">
                   <div class="doors-content">
-                   
+                    <a  href="<?php the_permalink(); ?>">
                     <p class="text-center">
-                    <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'preview-thumb' ); ?>" class="img-responsive">
+                   
+                    <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'preview-thumb' ); ?>" class="img-responsive"> 
                     <div class="overlay">
                       <h2 class="text-center">Find out more, explore colours and 
                       download our brochure</h2>
                     </div>
-                    </p>
+                    </p></a>
                   
 
    
@@ -47,16 +48,16 @@
       
         <?php  } else{ ?>
 
-      <div id='removeCol-sec' class="col-sec col-xs-6">
+      <div  class="col-sec removeCol-sec col-xs-6">
                   <div class="doors-content">
-                   
+                    <a  href="<?php the_permalink(); ?>">
                     <p class="text-center">
                     <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'preview-thumb' ); ?>" class="img-responsive">
                     <div class="overlay">
                       <h2 class="text-center">Find out more, explore colours and 
                       download our brochure</h2>
                     </div>
-                    </p>
+                    </p> </a>
                   
 
    

@@ -1,55 +1,57 @@
-       <?php // if ( !is_front_page() ) :  ?>
-   
+       <?php if (is_single() && is_post_type('garage_door')): ?>
+        <div class="button-call-wrapper">
+             <a class="brochure" href='<?php echo get_template_directory_uri() ?>/images/brochuretest.pdf' download>DOWNLOAD A <strong>BROCHURE</strong></a>
+        </div>
+        <?php else: ?>
 
-    <div class="button-call-wrapper">
+    <div class="button-call-wrapper"  <?php if (is_page('thank-you')) {echo 'style="display: none"';}?>>
         <button id="survey-mobile" class="button-call" href='#'>FOR SAME DAY REAPAIRS CALL <strong> 01924 849 579 </strong></button>
     </div>
-            
-            <?php // endif; ?> 
+
+            <?php endif;?>
 
     <footer class="footer text-center">
 
-      
-            
+
+
         <div class="social social--footer pull-left">
-            <?php if( $facebook = theme('social_accounts', 'facebook') ) { ?>
+            <?php if ($facebook = theme('social_accounts', 'facebook')) {?>
                 <a href="<?php echo $facebook ?>" class="social__facebook" title="Facebook" target="blank"><i class='fa fa-facebook' ></i>
                 </a>
-            <?php } ?>
+            <?php }?>
 
-            <?php if( $twitter = theme('social_accounts', 'twitter') ) { ?>
+            <?php if ($twitter = theme('social_accounts', 'twitter')) {?>
                 <a href="<?php echo $twitter ?>" class="social__twitter" title="Twitter" target="blank"><i class='fa fa-twitter' ></i>
                 </a>
-            <?php } ?>
+            <?php }?>
 
-            <?php if( $instagram = theme('social_accounts', 'instagram') ) { ?>
+            <?php if ($instagram = theme('social_accounts', 'instagram')) {?>
                 <a href="<?php echo $instagram ?>" class="social__instagram" title="Instagram" target="blank"><i class='fa fa-linkedin' ></i>
                 </a>
-            <?php } ?>
+            <?php }?>
         </div>
 
         <div class="footer__copy">
-           
-        
 
-        <div class="footer-links pull-right">
+
+
+        <div class="links pull-right">
             <p>
-            <a href="<?php echo site_url( 'terms' ); ?>" title="Terms &amp; Conditions">TERMS</a>
-             &nbsp; | &nbsp; 
-            <a href="<?php echo site_url( 'privacy' ); ?>" title="Privacy Policy">PRIVACY</a>
+           
+            <a href="<?php echo site_url('cookie-privacy'); ?>" title="Privacy Policy">COOKIE &amp; PRIVACY POLICY</a>
          </p>
       </div>
 
 
-           
+
 
 
     </footer>
 
-           
 
-   
 
-    <?php wp_footer(); ?>
+
+
+    <?php wp_footer();?>
 </body>
 </html>
