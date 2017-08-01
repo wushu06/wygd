@@ -4,11 +4,19 @@
         </div>
         <?php else: ?>
 
-    <div class="button-call-wrapper"  <?php if (is_page('thank-you')) {echo 'style="display: none"';}?>>
+   <!-- <div class="button-call-wrapper"  <?php if (is_page('thank-you')) {echo 'style="display: none"';}?>>
         <button id="survey-mobile" class="button-call" href='#'>FOR SAME DAY REAPAIRS CALL <strong> 01924 849 579 </strong></button>
+    </div>-->
+      <div class="btn-book">
+      <button id="btnCallDesktop" class="call-desktop" href='tel:01924 849 579 '>FOR SAME DAY REAPAIRS CALL <strong> 01924 849 579 </strong> </button>
+         <button id="btnCallMobile" class="call-mobile" href='#'>BOOK A <strong> FREE </strong> SITE SURVEY | <strong> 01924 849 579 </strong> </button>
     </div>
 
             <?php endif;?>
+     <div class="btn-call">
+         
+     </div>     
+
 
     <footer class="footer text-center">
 
@@ -31,14 +39,14 @@
             <?php }?>
         </div>
 
-        <div class="footer__copy">
+      
 
 
 
         <div class="links pull-right">
             <p>
            
-            <a href="<?php echo site_url('cookie-privacy'); ?>" title="Privacy Policy">COOKIE &amp; PRIVACY POLICY</a>
+            <a href="<?php echo site_url('privacy-policy'); ?>" title="Privacy Policy">COOKIE &amp; PRIVACY POLICY</a>
          </p>
       </div>
 

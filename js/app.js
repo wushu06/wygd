@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
     $('.menu-button').click(function() {
         $(this).toggleClass('button-open');
         $('.mobile-nav').toggleClass('menu-active');
-        $('#survey-mobile').toggle();
+        $('#btnCallMobile').toggle();
     });
     /* center element */
     $.fn.centerMe = function($position) {
@@ -32,25 +32,25 @@ jQuery(document).ready(function($) {
     $('.button-call, .brochure').centerMe('fixed');
     /* Styling & Changing wording and position of call button  */
     $(window).on('load resize', function() {
-        if ($(window).width() < 1025) {
-            $('.button-call').html('BOOK A <strong> FREE </strong> SITE SURVEY | <strong> 01924 849 579 </strong>').css({
-                'top': '60px',
-                'left': '0',
-                'width': '100%'
-            });
-            $('.menu-active').css({
-                'opacity': '1'
-            });
-        } else {
-            $('.button-call').html('FOR SAME DAY REAPAIRS CALL <strong> 01924 849 579 </strong>  ').css({
-                'bottom': '0px',
-                'width': 'auto',
-                'top': 'auto'
-            });;
-            $('.menu-active').css({
-                'opacity': '0'
-            });
-        }
+        /*  if ($(window).width() < 1025) {
+              $('.button-call').html('BOOK A <strong> FREE </strong> SITE SURVEY | <strong> 01924 849 579 </strong>').css({
+                  'top': '60px',
+                  'left': '0',
+                  'width': '100%'
+              });
+              $('.menu-active').css({
+                  'opacity': '1'
+              });
+          } else {
+              $('.button-call').html('FOR SAME DAY REAPAIRS CALL <strong> 01924 849 579 </strong>  ').css({
+                  'bottom': '0px',
+                  'width': 'auto',
+                  'top': 'auto'
+              });;
+              $('.menu-active').css({
+                  'opacity': '0'
+              });
+          }*/
     });
     /* toggle class for single garage door */
     $(window).on('load resize', function() {
@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
         location.href = this.href;
     });
     /* Show the survey form */
-    var btn = $('#btn-survey, #survey-mobile');
+    var btn = $('#btnCallMobile, #btn-survey');
     var form = $('#survey-form');
     var formTwo = $('#survey-form-two');
     var close = $('.block, #close, #closeTwo, #closeThree');
@@ -89,13 +89,15 @@ jQuery(document).ready(function($) {
         $('.form-survey-two').fadeOut();
     });
     $(btn).on('click', function() {
-        $('#survey-mobile').fadeOut();
+        $('#btnCallMobile').fadeOut();
         $(form).fadeIn(function() {
             $(close).on('click', function() {
                 form.fadeOut();
                 formTwo.hide();
                 $('.form-survey-two').hide();
-                $('#survey-mobile').fadeIn();
+                if ($(window).width() < 1025) {
+                    $('#btnCallMobile').fadeIn();
+                }
             });
         });
     });
@@ -139,9 +141,7 @@ jQuery(document).ready(function($) {
         }
     });
     /* init date picker */
-    $('#pickTime').timepicker({
-        'scrollDefault': 'now'
-    });
+    $('#pickTime').timepicker();
     /* Register cookies  */
     $(window).on('load', function() {
         var d = $.cookie('date');

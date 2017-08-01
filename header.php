@@ -39,14 +39,14 @@
 
         <div class="mobile-nav ">
                 <?php
-$arg = array(
-    'menu'       => 'primary',
-    'menu_class' => 'mobile-nav js-fadeLeft',
-    'container'  => 'false',
-);
-wp_nav_menu($arg);
+                $arg = array(
+                    'menu'       => 'primary',
+                    'menu_class' => 'mobile-nav js-fadeLeft',
+                    'container'  => 'false',
+                );
+                wp_nav_menu($arg);
 
-?>
+                ?>
         </div>
 
         <div >
@@ -140,6 +140,47 @@ if (is_page('Thank you')) {?>
  </div>
 
 <?php ?>
+<?php if(is_singular('areas')) : ?>
 
+    <script>
+        (function($) {
+        $(document).ready(function() {   
+            $('#menu-item-20').addClass('current-menu-item');
+        });
+        })(jQuery);
+    </script>
 
-
+<?php endif; ?>
+<?php 
+$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+?>
+<?php 
+if (strpos($url,'post') !== false) {?>
+     <script>
+        (function($) {
+        $(document).ready(function() {   
+            $('#menu-item-277').addClass('active');
+        });
+        })(jQuery);
+    </script>
+<?php }?>
+<?php 
+if (strpos($url,'areas') !== false) {?>
+     <script>
+        (function($) {
+        $(document).ready(function() {   
+            $('#menu-item-339').addClass('active');
+        });
+        })(jQuery);
+    </script>
+<?php }?>
+<?php 
+if (strpos($url,'garage-door') !== false || strpos($url,'garage_door') !== false) {?>
+     <script>
+        (function($) {
+        $(document).ready(function() {   
+            $('#menu-item-357').addClass('active');
+        });
+        })(jQuery);
+    </script>
+<?php }?>

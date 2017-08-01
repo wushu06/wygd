@@ -11,7 +11,7 @@
 	            <div class="col-md-6 col-xs-12">
 	            <div class="content-wrap">
 	               	     <div class="block-repairs-img">
-	            		<img src="<?php echo theme( 'image', 'url' ); ?>">
+	            		<img src="<?php echo theme( 'image', 'url' ); ?>" class='img-responsive'>
 	            	</div>
             	<div class="block-repairs-info">
 	            		

@@ -20,6 +20,7 @@
 
 
 <div class="block-location" style="<?php if(is_page('area')){ echo'margin: 150px auto';} ?>">
+<div class="container">
 <h6 class="text-center"><a href="#"><?php echo theme('small_title'); ?></a></h6>
 <h2 class="text-center"><?php echo theme('title'); ?></h2>
 
@@ -36,7 +37,7 @@
 			<a href="<?php the_permalink(); ?>" >
 			<div class="location-image">
 				 
-	                 <img src="<?php echo get_the_post_thumbnail_url( ); ?>"  />
+	                 <img src="<?php echo get_the_post_thumbnail_url( ); ?>" class='img-responsive' />
 	            
 				<div class="overlay">
 					<div class="text text-center">
@@ -61,7 +62,7 @@
 
 
 
-	
+</div>	
 
 
 </div>

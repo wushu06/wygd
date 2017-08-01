@@ -3,7 +3,7 @@
 <div class="block block-doors">
     <div class="container">
 
-      <h6 class="text-center"> <a href="<?php echo  get_site_url() ?>/garage-doors">GARAGE DOORS</a> &nbsp; | &nbsp; <a href="">UP AND OVER STEEL GARAGE DOORS</a></h6>                    
+      <h6 class="text-center"> <a href="<?php echo  get_site_url() ?>/garage-doors">GARAGE DOORS</a> &nbsp; | &nbsp; <a href=""><?php single_cat_title(); ?> </a></h6>                    
       <h2 class="text-center big-title"> <?php single_cat_title(); ?> </h2>
          
          <div class="text-center cat-content"><?php echo category_description(); ?></div>  

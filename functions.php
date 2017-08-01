@@ -53,12 +53,16 @@ require_once get_template_directory() . '/inc/helpers/westYorkshire.php';
  * @since 1.0.1
  */
 class westYorkshire
+
 {
+
+  
     /**
      * Set up our action and filter hooks.
      */
     public function __construct()
     {
+    
         /**
          * Remove Generator Meta Tag.
          *
@@ -82,7 +86,7 @@ class westYorkshire
          *
          * @since 1.0.1
          */
-        add_filter('nav_menu_css_class', array($this, 'add_active_class'), 10, 2);
+      //  add_filter('nav_menu_css_class', array($this, 'add_active_class'), 10, 2);
         /*
          * Google Api
          */
@@ -149,13 +153,14 @@ class westYorkshire
         // Add RSS feed links to <head> for posts and comments.
         add_theme_support('automatic-feed-links');
     }
+      
     /**
      * Add additional classes to active menu items.
      *
      * @since 1.0.1
      * @access public
      */
-    public function add_active_class($classes, $item)
+   /* public function add_active_class($classes, $item)
     {
         if ($item->menu_item_parent == 0 &&
             in_array('current-menu-item', $classes) ||
@@ -167,7 +172,7 @@ class westYorkshire
             $classes[] = 'active';
         }
         return $classes;
-    }
+    }*/
 }
 // Here we go! - Mario, 2017
 new westYorkshire;
@@ -177,6 +182,7 @@ function custom_excerpt_length($length)
     return 20;
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
 function is_post_type($type)
 {
     global $wp_query;
@@ -185,8 +191,12 @@ function is_post_type($type)
     }
     return false;
 }
+
 function new_excerpt_more($more)
 {
     return '...';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+
+
+
+ 
